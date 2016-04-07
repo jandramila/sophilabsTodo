@@ -5,5 +5,5 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-user = User.create({ username: 'Jandramila', clean_password: '123456' })
-todo_list = TodoList.create({ name: 'Make sample code 4 Sophilabs', user: user })
+user = User.create( username: "Asd", password: '1234568' )
+todo_list = TodoList.create( name: 'Make sample code 4 Sophilabs', user: user )
