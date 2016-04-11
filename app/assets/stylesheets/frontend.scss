@@ -1,0 +1,51 @@
+// Place all the styles related to the Frontend controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body{
+    background-color: #0285F7;
+}
+
+div.css-error-alert{
+    margin-top: 20px;
+}
+
+div.css-header{
+    text-align: center;
+}
+
+div.css-todo-item{
+    margin-bottom: 6px;
+}
+
+div.css-new-todo-bar{
+    margin-bottom: 20px;
+}
+
+hr.css-styled-separator {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin-top: 15px;
+}
+
+input.css-custom-checkbox{
+    position: relative;
+    top: 3px;
+}
+
+span.css-todo-done{
+    text-decoration: line-through;
+}
+
+span.css-todo-text{
+    font-weight: bold;
+}
+
+.css-todo-action{
+    margin-left: 4px;
+}
+
+
+

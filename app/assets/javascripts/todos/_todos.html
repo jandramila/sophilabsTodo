@@ -1,0 +1,75 @@
+<div class="row">
+    <div class="col-md-offset-2 col-md-8 col-xs-12 col-sm-12 col-lg-8">
+        <div class="css-error-alert">
+            <uib-alert type="danger" ng-show="errorMessage">{{errorMessage | json}}</uib-alert>
+        </div>
+        <div class="page-header css-header">
+            <h3>Todo List</h3>
+        </div>
+        <div class="css-new-todo-bar">
+            <div class="input-group">
+                <input  type="text"
+                        class="form-control"
+                        placeholder="Description"
+                        ng-model="newTodo.name"
+                        ng-disabled="httpRequestOnCourse || editing">
+                <span class="input-group-btn">
+                    <button class="btn btn-secondary"
+                            type="button"
+                            ng-click="createTodo(newTodo)"
+                            ng-disabled="httpRequestOnCourse || editing">
+                        Add Todo
+                    </button>
+                </span>
+            </div>
+        </div>
+        <div>
+            <div ng-repeat="todo in todos" class="css-todo-item">
+                <div class="row">
+                    <div class="col-md-8 col-xs-8 col-sm-8 col-lg-8">
+                        <span   ng-class="{'css-todo-done':todo.done}"
+                                ng-hide="todo.editing"
+                                class="css-todo-text">
+                            {{todo.name}}
+                        </span>
+                        <div class="input-group input-group-sm"
+                             ng-show="todo.editing">
+                            <input  type="text"
+                                    class="form-control"
+                                    placeholder="Description"
+                                    ng-model="todo.name"/>
+                            <span class="input-group-btn">
+                                <button class="btn btn-secondary"
+                                        type="button"
+                                        ng-click="updateTodo(todo)">
+                                    Save
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
+                        <span class="pull-right">
+                            <input  type="checkbox"
+                                    ng-model="todo.done"
+                                    class="css-custom-checkbox css-todo-action"
+                                    ng-disabled="httpRequestOnCourse || editing"
+                                    ng-change="updateTodo(todo)"/>
+                            <button class="btn btn-xs btn-success css-todo-action"
+                                    ng-disabled="httpRequestOnCourse || editing"
+                                    ng-click="editTodo(todo)">
+                                Edit
+                            </button>
+                            <button class="btn btn-xs btn-danger css-todo-action"
+                                    ng-disabled="httpRequestOnCourse || editing"
+                                    ng-click="deleteTodo(todo)">
+                                Delete
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <hr class="css-styled-separator" ng-if="!$last"/>
+            </div>
+        </div>
+    </div>
+</div>

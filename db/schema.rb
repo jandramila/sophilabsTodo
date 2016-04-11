@@ -11,33 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160407104737) do
-
-  create_table "todo_lists", force: :cascade do |t|
-    t.integer  "user_id"
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "todo_lists", ["user_id"], name: "index_todo_lists_on_user_id"
+ActiveRecord::Schema.define(version: 20160407020532) do
 
   create_table "todos", force: :cascade do |t|
-    t.integer  "todo_list_id"
     t.string   "name"
-    t.boolean  "status",       default: false
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
-  end
-
-  add_index "todos", ["todo_list_id", "name"], name: "index_todos_on_todo_list_id_and_name", unique: true
-
-  create_table "users", force: :cascade do |t|
-    t.string   "username"
-    t.string   "encrypted_password"
-    t.string   "salt"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.boolean  "done",       default: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
 end

@@ -5,5 +5,4 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-user = User.create( username: "Asd", password: '1234568' )
-todo_list = TodoList.create( name: 'Make sample code 4 Sophilabs', user: user )
+todos = Todo.create( [{name: "Generate Ruby Project"},  {name: "Commit"}, {name: "Setup Server"}])
