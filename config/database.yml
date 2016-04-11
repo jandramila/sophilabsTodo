@@ -21,5 +21,6 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  adapter: sqlite3
+  database: /home/deploy/sophielabsTodo/current/db/production.sqlite3 # instead of db/production.sqlite3
+  timeout: 5000
