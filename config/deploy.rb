@@ -1,5 +1,5 @@
 set :application, 'sophielabsTodo'
-set :repo_url, 'github.com/jandramila/sophilabsTodo.git'
+set :repo_url, 'https://github.com/jandramila/sophilabsTodo.git'
 
 set :deploy_to, '/home/deploy/sophielabsTodo'
 
